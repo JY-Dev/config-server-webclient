@@ -10,7 +10,7 @@ spring:
       server:
         awsparamstore:
           enabled: true
-          region: ap-northeast-1
+          region: ${eureka.region}
           profile-separator: _
   application:
     name: config-server
@@ -21,3 +21,4 @@ eureka:
   client:
     service-url:
       defaultZone: ${eureka.server.url}
+    region: ${eureka.region}
