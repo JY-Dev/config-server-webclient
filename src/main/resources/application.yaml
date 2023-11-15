@@ -3,15 +3,13 @@ server:
 
 spring:
   profiles:
-    active: awsparamstore
+    active: awss3
   cloud:
-    enabled: true
     config:
       server:
-        awsparamstore:
-          enabled: true
-          region: ${eureka.region}
-          profile-separator: _
+        awss3:
+          bucket: ttcare-remote-config-test
+          region: ap-northeast-1
   application:
     name: config-server
 
